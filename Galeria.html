@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--SECCION DE META DATA-->
+ <meta charset="UTF-8" />
+  <link rel="shortcut icon" href="icono.png" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeria</title>
+  <meta name="description" content="Pagina de Ejemplo para Proyecto Web Basico y Git y Git-Hub de IHC">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="ING. JUANCITO PEÑA">
+  <meta name="copyright" content="https://advisertecnology.com/" />
+  <link rel="stylesheet" href="estilo.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+       img {
+          width: 100%; /* need to overwrite inline dimensions */
+          height: auto;
+        }
+        h2 {
+          margin-bottom: .5em;
+        }
+        .grid-container {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          grid-gap: 1em;
+        }
+
+
+        /* hover styles */
+        .location-listing {
+          position: relative;
+        }
+
+        .location-image {
+          line-height: 0;
+          overflow: hidden;
+        }
+
+        .location-image img {
+          filter: blur(0px);
+          transition: filter 0.3s ease-in;
+          transform: scale(1.1);
+        }
+
+        .location-title {
+          font-size: 1.5em;
+          font-weight: bold;
+          text-decoration: none;
+          z-index: 1;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          transition: opacity .5s;
+          background: rgba(90,0,10,0.4);
+          color: white;
+          
+          /* position the text in t’ middle*/
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .location-listing:hover .location-title {
+          opacity: 1;
+        }
+
+        .location-listing:hover .location-image img {
+          filter: blur(2px);
+        }
+
+
+        /* for touch screen devices */
+        @media (hover: none) { 
+          .location-title {
+            opacity: 1;
+          }
+          .location-image img {
+            filter: blur(2px);
+          }
+        }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+ 
+    <nav>
+      <ul>
+        <li><a href="index.html">Home |</a></li>
+        <li><a class="active" href="sobre_mi.html">Sobre Mi |</a></li>
+        <li><a href="Galeria.html">Galeria |</a></li>
+      </ul>
+
+    </nav>
+
+   
+    <!--CONTENIDO-->
+    <section id="contenido">
+      <!--ARTICULOS-->
+     
+
+     <article class="parrafo">
+        <h2>
+          <div class="child-page-listing">
+
+            <h2>Vehiculos Deportivos Veloces</h2>
+          
+            <div class="grid-container">
+          
+              <article id="3685" class="location-listing">
+          
+                <a class="location-title" href="#">
+                   Jaguar XJ220       </a>
+          
+                <div class="location-image">
+                  <a href="#">
+                    <img width="300" height="169" src="IMG/jaguar.jpg" alt="london">  </a>
+                </div>
+          
+              </article>
+          
+              <article id="3688" class="location-listing">
+          
+                <a class="location-title" href="#">
+                    Porsche 918 Spyder            </a>
+          
+                <div class="location-image">
+                  <a href="#">
+                      <img width="300" height="169" src="IMG/porche.jpg" alt="london">  </a>
+          
+                </div>
+          
+              </article>
+          
+              <article id="3691" class="location-listing">
+          
+                <a class="location-title" href="#">
+                   LaFerrari         </a>
+          
+                <div class="location-image">
+                  <a href="#">
+                      <img width="300" height="169" src="IMG/ferrari.jpg" alt="new york">  </a>
+          
+                </div>
+          
+              </article>
+          
+              <article id="3694" class="location-listing">
+          
+                <a class="location-title" href="#">
+                   Bugatti EB110           </a>
+          
+                <div class="location-image">
+                  <a href="#">
+                    <img width="300" height="169" src="IMG/bugatti.jpg" alt="new york">  </a>
+                </div>
+          
+              </article>
+          
+              <article id="3697" class="location-listing">
+          
+                <a class="location-title" href="#">
+                    McLaren F1           </a>
+          
+                <div class="location-image">
+                  <a href="#">
+                    <img width="300" height="169" src="IMG/mclarenf1.jpg" alt="new york">  </a>
+                </div>
+          
+              </article>
+          
+              <article id="3700" class="location-listing">
+          
+                <a class="location-title" href="#">
+                    Pagani Huayra BC           </a>
+          
+                <div class="location-image">
+                  <a href="#">
+                    <img width="300" height="169" src="IMG/pagani.jpg" alt="new york">  </a></a>
+                </div>
+          
+              </article>
+              <article id="3700" class="location-listing">
+          
+                <a class="location-title" href="#">
+                    
+Bugatti Veyron           </a>
+          
+                <div class="location-image">
+                  <a href="#">
+                    <img width="300" height="169" src="IMG/bugattiv.jpg" alt="new york">  </a></a>
+                </div>
+          
+              </article>
+              <article id="3700" class="location-listing">
+          
+                <a class="location-title" href="#">
+                    McLaren P1           </a>
+          
+                <div class="location-image">
+                  <a href="#">
+                    <img width="300" height="169" src="IMG/mclaren.jpg" alt="new york">  </a> </a>
+                </div>
+          
+              </article>
+          
+            </div>
+            <!-- end grid container -->
+          
+          </div>
+          
+        </h2>
+        <hr style="border: 1px solid red; background-color: blue; width: 100%;">
+       <p>
+       
+      </p>
+      </article>
+
+     
+
+      <p><h2>Sigueme en Mis Redes Sociales </h2> </p>
+              
+      <hr style="border: 1px solid red; width: 100%;">
+     
+      <div class="redes">
+        <ul>
+          <a href="#" class="fa fa-linkedin"></a>
+          <a href="#" class="fa fa-youtube"></a>
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-instagram"></a>
+        </ul>
+   
+      </div>
+      
+      </article>
+     
+    </section>
+
+    <br> 
+     <br>
+     <hr style="border: 1px solid red; background-color: blue; width: 100%;">
+    <!--FOOTER O PIE DE PAGINA-->
+    <footer>
+      <p>&copy; Fabio E. (O&M)</p>
+    </footer>
+  </div>
+</body>
+
+</html>
